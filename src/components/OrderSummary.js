@@ -2,7 +2,7 @@ import React, { useContext, useState } from 'react';
 import { BundleContext } from '../contexts/BundleContext';
 
 const OrderSummary = () => {
-  const { selectedTiers, finalPrice, savings, bundleName, setBundleName } = useContext(BundleContext);
+  const { selectedTiers, finalPrice, savings, bundleName, setBundleName, subscriptionLength } = useContext(BundleContext);
   const [isLoading, setIsLoading] = useState(false);
   
   const handlePurchase = async () => {
@@ -35,7 +35,7 @@ const OrderSummary = () => {
         body: JSON.stringify({
           bundleID,
           bundleName: bundleName || 'My Bundle',
-          subLength: subscriptionLength,
+          subLength: subscriptionLength || 3, // Provide a default value of 3 if undefined
           finalMonthly: finalPrice.toFixed(2),
           selectedServices,
           customerName,
