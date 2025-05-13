@@ -1,0 +1,10 @@
+{
+  "name": "buzzword-bundle-builder-functions",
+  "version": "1.0.0",
+  "description": "Netlify Functions for Buzzword Bundle Builder",
+  "dependencies": {
+    "docusign-esign": "^6.0.0",
+    "stripe": "^12.0.0",
+    "@supabase/supabase-js": "^2.0.0"
+  }
+}
