@@ -2,9 +2,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Success = () => {
-  // Parse URL parameters
-  const urlParams = new URLSearchParams(window.location.search);
-  const bundleID = urlParams.get('bundleID');
+  // Remove the unused variable assignment
+  // const urlParams = new URLSearchParams(window.location.search);
+  // const bundleID = urlParams.get('bundleID');
   
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-50 p-4">
